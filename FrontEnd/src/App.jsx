@@ -7,13 +7,13 @@ export default function App() {
 
   return (
     <>
-    <Router>
-      <Routes>
-        <Route path="/"  element={<Label/>} />
-        <Route path="/add"  element={<Form/>} />
-        <Route path='/edit/:id' element={<Edit/>} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Label />} />
+          <Route path="/add" element={<Form />} />
+          <Route path='/edit/:id' element={<Edit />} />
+        </Routes>
+      </Router>
     </>
   );
 }

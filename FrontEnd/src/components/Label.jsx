@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { IoIosAddCircle } from "react-icons/io";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Label() {
     const [users, setUsers] = useState([]);
@@ -14,7 +14,7 @@ export default function Label() {
         setUsers(response.data);
     }
 
-    const deleteUser = async(id) => {
+    const deleteUser = async (id) => {
         try {
             await axios.delete(`http://localhost:5000/users/${id}`)
             getUsers();
@@ -24,7 +24,7 @@ export default function Label() {
     }
     return (
         <div className="container py-20 px-52">
-            <Link to='/add' className='flex gap-2 w-32 py-1.5 px-5 bg-sky-500 my-1 rounded-lg justify-center items-center text-center text-white font-semibold'><IoIosAddCircle size={18}/>Add</Link>
+            <Link to='/add' className='flex gap-2 w-32 py-1.5 px-5 bg-sky-500 my-1 rounded-lg justify-center items-center text-center text-white font-semibold'><IoIosAddCircle size={18} />Add</Link>
             <table className="table-auto  w-full bg-sky-100 rounded-md justify-center items-center text-center">
                 <thead className=" bg-sky-500">
                     <tr>
